@@ -1,0 +1,23 @@
+{
+  "name": "elpadi/always-on-purpose",
+  "description": "Website for life coach Amy Eliza Wong.",
+  "keywords": [
+    "wordpress",
+    "blog",
+    "cms"
+  ],
+  "type": "package",
+  "homepage": "http://alwaysonpurpose.com/",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Carlos Padilla",
+      "homepage": "http://github.com/elpadi/"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.2",
+    "johnpbloch/wordpress-core-installer": "^1.0",
+    "johnpbloch/wordpress-core": "dev-master"
+  }
+}
