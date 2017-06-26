@@ -323,3 +323,27 @@ li.contact{background:url(images/btn_contact_b.jpg) no-repeat; height:70px;}
 
 #testimonials, #content-wrapper, #footer { -webkit-box-sizing:border-box; box-sizing:border-box; }
 
+/* home video */
+#content .video {
+	margin-bottom: 15px;
+	padding: 2em 3.5em;
+	background-color: #616264;
+}
+#content .video > h2 {
+	margin: 0;
+	text-align: center;
+	color: white;
+	font-family: 'BrandonGrotesque-Regular', sans-serif;
+}
+#content .video > p {
+	margin: 0;
+	height: 0;
+	padding-bottom: 56.25%;
+}
+.video iframe {
+	display: block;
+	width: 100%;
+}
+.video .really_simple_share {
+	display: none;
+}

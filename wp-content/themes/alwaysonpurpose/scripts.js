@@ -16,5 +16,6 @@
 
 	$(document).ready(function() {
 		$('#testimonials').tCycle(1000, 5000);
+		$('.video iframe').each(function() { this.style.height = Math.round(this.offsetWidth * 9 / 16) + 'px'; });
 	});
 })(jQuery);

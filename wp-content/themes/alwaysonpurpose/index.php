@@ -56,6 +56,14 @@ get_header(); ?>
 		</ul>
 		<div class="clear"></div>
 
+		<!-- home page video before blog posts -->
+		<?php if ( is_home() ): ?>
+		<div class="video">
+			<h2 class="video__title">Own the Room: Two Minute Talk</h2>
+			<?php print apply_filters('the_content', 'https://vimeo.com/222235865'); ?>
+		</div>
+		<?php endif; ?>
+
 		<div class="blog-content">
 		<!--Content-->
 
