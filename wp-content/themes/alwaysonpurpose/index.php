@@ -57,12 +57,7 @@ get_header(); ?>
 		<div class="clear"></div>
 
 		<!-- home page video before blog posts -->
-		<?php if ( is_home() ): ?>
-		<div class="video">
-			<h2 class="video__title">Own the Room: Two Minute Talk</h2>
-			<?php print apply_filters('the_content', 'https://vimeo.com/222235865'); ?>
-		</div>
-		<?php endif; ?>
+		<?php if ( is_home() && function_exists('aop_home_video') ) aop_home_video(); ?>
 
 		<div class="blog-content">
 		<!--Content-->

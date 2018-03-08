@@ -35,7 +35,7 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/always.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/always.css?v=1" />
 <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
