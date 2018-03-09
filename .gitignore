@@ -5,6 +5,7 @@ vendor
 
 wordpress
 wp-content/*
+!wp-content/mu-plugins
 !wp-content/themes
 !wp-content/themes/alwaysonpurpose/index.php
 wp-content/themes/alwaysonpurpose/images/
