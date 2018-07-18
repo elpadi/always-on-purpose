@@ -534,12 +534,20 @@ function aop_html_excerpt($text) {
 add_filter('get_the_excerpt', 'aop_html_excerpt');
 
 function aop_popular_posts() {
+	$STICKY_IDS = [2114];
+	$POST_COUNT = count($STICKY_IDS) + 3;
+	$sticky = get_posts(array(
+		'orderby' => 'comment_count',
+		'order' => 'DESC',
+		'post__in' => $STICKY_IDS,
+	));
 	$popular = get_posts(array(
-		'posts_per_page' => 3,
+		'post__not_in' => $STICKY_IDS,
+		'posts_per_page' => $POST_COUNT,
 		'orderby' => 'comment_count',
 		'order' => 'DESC',
 	));
-	return array_slice(apply_filters('aop_popular_posts', $popular), 0, 3);
+	return array_slice(apply_filters('aop_popular_posts', array_merge($sticky, $popular)), 0, $POST_COUNT);
 }
 
 if ( ! function_exists( 'post_is_in_descendant_category' ) ) {
