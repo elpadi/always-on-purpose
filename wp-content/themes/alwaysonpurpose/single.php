@@ -22,7 +22,7 @@ get_header(); ?>
                     	<div class="post-date"><?php the_date('m-d-Y'); ?></div>
                         <div class="post-title">
                         
-                        	<h1><a href="/?p=<?php echo $post->ID; ?>"><?php the_title(); ?></a></h1>
+                        	<h1><?php the_title(); ?></h1>
                         
                         </div>
                         <div class="clear"></div>
