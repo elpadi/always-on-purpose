@@ -22,17 +22,15 @@ get_header(); ?>
  * @version 2.7
  * @link http://codex.wordpress.org/Function_Reference/in_category#Testing_if_a_post_is_in_a_descendant_category
  */
-if ( ! function_exists( 'post_is_in_descendant_category' ) ) {
-	function post_is_in_descendant_category( $cats, $_post = null )
-	{
-		foreach ( (array) $cats as $cat ) {
-			// get_term_children() accepts integer ID only
-			$descendants = get_term_children( (int) $cat, 'category');
-			if ( $descendants && in_category( $descendants, $_post ) )
-				return true;
-		}
-		return false;
+function post_is_in_descendant_category( $cats, $_post = null )
+{
+	foreach ( (array) $cats as $cat ) {
+		// get_term_children() accepts integer ID only
+		$descendants = get_term_children( (int) $cat, 'category');
+		if ( $descendants && in_category( $descendants, $_post ) )
+			return true;
 	}
+	return false;
 }
 ?>
 

@@ -74,10 +74,6 @@
             
 						<div id="nav">
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-							<ul class="social-media-links">
-								<li class="twitter"><a href="http://twitter.com/#!/amyelizawong" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/btn_twitter.jpg" /></a></li>
-								<li class="facebook"><a href="<?php echo FACEBOOK_URL; ?>" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/btn_facebook.jpg" /></a></li>
-							</ul>
 						</div>
             <div class="clear"></div>
         </div>

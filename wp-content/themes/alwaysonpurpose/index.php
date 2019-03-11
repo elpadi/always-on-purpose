@@ -34,24 +34,28 @@ get_header(); ?>
 		<!--Testimonials-->
 		<ul id="testimonials">
 			<li>
-				<blockquote><p>Amy does not tell me what to do or how to do it.  Instead she helps me develop my own set of tools so I can help myself overcome past barriers and reach my goals.</p></blockquote>
-				<p>Suzy Lee</p>
+				<blockquote><p>Amy Wong is a powerhouse. Whether you’re looking for a dynamic keynote speaker to ignite your event, a skilled trainer to deliver an impactful workshop for your leaders or teams, or an experienced coach to help take your life and career to the next level, Amy can do it. </p></blockquote>
+				<p>Mike Robbins, author of Nothing Changes Until You Do</p>
+			</li>
+				<li>
+				<blockquote><p>Brandy helped me to reach my goals, and I recommend her as a life coach without reservation. She has the unique ability to help you find your own tools and believe in yourself… I am confident you will be happy with her services.</p></blockquote>
+				<p>R. Alarian</p>
 			</li>
 			<li>
-				<blockquote><p>Her insightfulness and understanding of what is food for growth and expansion helped me break through the remaining barriers that I was creating for myself... I am now living a life that I thought I never could have.</p></blockquote>
+				<blockquote><p>Amy's insightfulness and understanding of what is food for growth and expansion helped me break through the remaining barriers that I was creating for myself... I am now living a life that I thought I never could have.</p></blockquote>
 				<p>Dr. Andrea Rosario</p>
-			</li>
-			<li>
-				<blockquote><p>She's an amazing listener and unlike a psychologist she offers useful suggestions but in a way that have allowed me to arrive at my own conclusions.   I can say, without reservation, Amy has changed my life.</p></blockquote>
-				<p>Stefan Brandes</p>
-			</li>
-			<li>
-				<blockquote><p>Despite years of various forms of healing such as psychotherapy, depth hypnosis, and my mediation practice, Amy helped me to uncover hidden thought patterns and feelings that I wasn't aware I was holding.</p></blockquote>
-				<p>Shauna Brandes</p>
 			</li>
 			<li>
 				<blockquote><p>It was amazing the kind of internal movement, personal reflection and ultimately self-actualization that I accomplished in only a few sessions!</p></blockquote>
 				<p>Ashley Rosales</p>
+			</li>
+			<li>
+				<blockquote><p>Brandy’s coaching was really empathetic. She helped me pursue the things I wanted but was too afraid to take action on. She also helped me to stop doubting myself and to start focusing on the things that energize me and feel engaging to me. Her coaching creates tangible results…</p></blockquote>
+				<p>M. Inzunza</p>
+			</li>
+			<li>
+				<blockquote><p>Thank you, Amy, for a life changing session at our company’s conference in Vegas last week. That is not an exaggeration. What you taught us about listening to connect is so powerful, it’s like a mantra for me now. Hope we get to work with you again.</p></blockquote>
+				<p>Daniel Verrico</p>
 			</li>
 		</ul>
 		<div class="clear"></div>

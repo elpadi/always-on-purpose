@@ -124,7 +124,7 @@ li.contact{background:url(images/btn_contact_b.jpg) no-repeat; height:70px;}
 
 #content{width:814px; background:url(images/bg_homeContent.jpg) #7e8083 center bottom no-repeat; padding:24px 30px;}
 	#content .col{float:left; width:241px; padding:0 45px 0 0;}
-		#content .col h1{color:#ffef00; font-weight:normal; font-size:20px; line-height:29px;}
+		#content .col h1{color:#ffef00; font-weight:normal; font-size:20px; line-height:32px;}
 		#content .col p{margin:15px 20 0 0;}
 		#content .col .hr{width:100%; background:#9fa1a4; height:2px; margin:15px 0 0 0;}
 		#content .col .quote{margin:15px 0 0 0; font-size:18px; line-height:30px;}
@@ -142,14 +142,14 @@ li.contact{background:url(images/btn_contact_b.jpg) no-repeat; height:70px;}
 		.page-template-default #content .col.quote i {
 			font-style: normal;
 		}
-		.page-template-default #content .col h1{font-size:18px; padding:0 30px; margin:25px 0 15px 0; font-style:italic;}
+		.page-template-default #content .col h1{font-size:18px; padding:0 30px; margin:25px 0 15px 0; font-style:normal;}
 		.page-template-default #content .last center,
-		.page-template-default #content .col p { font-size:14px; }
-		.page-template-default #content .col p{ padding:0 30px; font-family: 'BrandonGrotesque-Regular', sans-serif; color:#FFF; font-style:italic;}
+		.page-template-default #content .col p { font-size:16px; }
+		.page-template-default #content .col p{ padding:0 30px; font-family: 'BrandonGrotesque-Regular', sans-serif; color:#FFF; font-style:normal;}
 	
-	.page-template-default #content .last{width:580px; margin:0; padding:0 0 80px 0; float:right; color:#616264; line-height:20px; background:url(images/bg_contentFlower.jpg) center bottom no-repeat;}
-		.page-template-default #content .last h1{font-size:19px; color:#616264; margin:30px 0 10px; padding:0 30px; font-style:normal;}
-		.page-template-default #content .last h1.title{font-size:27px; color:#fff; margin:25px 0 20px; padding:0 30px; text-transform:uppercase;}
+	.page-template-default #content .last{width:580px; margin:0; padding:0 0 80px 0; float:right; color:#616264; line-height:22px; background:url(images/bg_contentFlower.jpg) center bottom no-repeat;}
+		.page-template-default #content .last h1{font-size:24px; color:#616264; margin:30px 0 10px; padding:0 30px; font-style:normal;}
+		.page-template-default #content .last h1.title{font-size:30px; color:#616264; margin:50px 0 20px; padding:0 30px; text-transform:uppercase;}
 		.page-template-default #content .last ul{padding:0 42px; list-style:disc; font-size:13px; margin:0 0 20px 0;}
 		.page-template-default #content .last p{ margin:0 0 15px 0; padding:0 30px; color:#616264; font-style:normal; font-family:Georgia, "Times New Roman", Times, serif;}
 
@@ -160,11 +160,11 @@ li.contact{background:url(images/btn_contact_b.jpg) no-repeat; height:70px;}
 		.page-id-6 #content .col h1{font-size:18px; padding:0 30px; margin:25px 0 15px 0; font-style:normal;}
 		.page-id-6 #content .col p{font-size:16px; padding:0 30px; font-family: 'BrandonGrotesque-Regular', sans-serif; color:#FFF; font-style:normal;}
 	
-	.page-id-6 #content .last{width:580px; margin:0; padding:0 0 80px 0; float:right; color:#616264; line-height:20px; background:url(images/bg_contentFlower.jpg) center bottom no-repeat;}
-		.page-id-6 #content .last h1{font-size:19px; color:#616264; margin:30px 0 10px; padding:0 30px; font-style:normal;}
-		.page-id-6 #content .last h1.title{font-size:27px; color:#fff; margin:25px 0 20px; padding:0 30px; text-transform:uppercase;}
+	.page-id-6 #content .last{width:580px; margin:0; padding:0 0 80px 0; float:right; color:#616264; line-height:22px; background:url(images/bg_contentFlower.jpg) center bottom no-repeat;}
+		.page-id-6 #content .last h1{font-size:24px; color:#616264; margin:30px 0 10px; padding:0 30px; font-style:normal;}
+		.page-id-6 #content .last h1.title{font-size:27px; color:#fff; margin:50px 0 20px; padding:0 30px; text-transform:uppercase;}
 		.page-id-6 #content .last ul{padding:0 42px; list-style:disc; font-size:14px; margin:0 0 20px 0;}
-		.page-id-6 #content .last p{font-size:14px; margin:0 0 15px 0; padding:0 30px; color:#616264; font-style:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+		.page-id-6 #content .last p{font-size:16px; margin:0 0 15px 0; padding:0 30px; color:#616264; font-style:normal; font-family:Georgia, "Times New Roman", Times, serif;}
 		
 /*-----Testimonials Template-----*/
 
@@ -186,15 +186,22 @@ li.contact{background:url(images/btn_contact_b.jpg) no-repeat; height:70px;}
 .page-id-1485 #content .last ul{padding:0 42px; list-style:disc; font-size:14px; margin:0 0 20px 0; font-family:Georgia, "Times New Roman", Times, serif; color:#616264;}
 .page-id-1485 #content .last a{color:#616264; text-decoration:underline;}
 
+/*-----Resources and Inspiration Template-----*/
+
+.page-id-2068 #content .quote p{font-size:15px; line-height:27px; padding:0 30px; font-family:Georgia, "Times New Roman", Times, serif; color:#FFF; font-style:italic;}
+.page-id-2068 #content .quote span{font-size:15px; line-height:27px; font-family:Georgia, "Times New Roman", Times, serif; color:#FFF; float:right;}
+.page-id-2068 #content .last ul{padding:0 42px; list-style:disc; font-size:14px; margin:0 0 20px 0; font-family:Georgia, "Times New Roman", Times, serif; color:#616264;}
+.page-id-2068 #content .last a{color:#616264; text-decoration:underline;}
+
 /*-----Contact Template-----*/
 
 .page-id-12 #content{padding:0; margin:7px 0 0 0; width:100%; background:none;}
 	.page-id-12 #content .col{width:286px; margin:0; padding:0 0 0 0;}
 		.page-id-12 #content .col h1{font-size:18px; padding:0 30px; margin:25px 0 15px 0; font-style:italic;}
-		.page-id-12 #content .col p{font-size:14px; padding:0 30px; font-family: 'BrandonGrotesque-Regular', sans-serif; color:#FFF; font-style:italic;}
+		.page-id-12 #content .col p{font-size:16px; padding:0 30px; font-family: 'BrandonGrotesque-Regular', sans-serif; color:#FFF; font-style:italic;}
 	.page-id-12 #content > .col:first-child img { width:100%; height:auto; }
 	
-	.page-id-12 #content .last{width:580px; margin:0; padding:0 0 80px 0; float:right; color:#616264; line-height:20px; background:#dfe0e1;}
+	.page-id-12 #content .last{width:580px; margin:0; padding:0 0 80px 0; float:right; color:#616264; line-height:22px; background:#dfe0e1;}
 		.page-id-12 #content .last h1{font-size:19px; color:#616264; margin:5px 0 20px; padding:0 30px; font-style:normal;}
 		.page-id-12 #content .last h1.title{font-size:27px; color:#fff; margin:25px 0 20px; padding:0 30px; text-transform:uppercase;}
 		.page-id-12 #content .last ul{padding:0 42px; list-style:disc; font-size:13px; margin:0 0 20px 0;}

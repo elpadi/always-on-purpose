@@ -8,7 +8,7 @@
  */
 ?>
 
-				<img src="<?php bloginfo('template_url'); ?>/images/woods.jpg" alt="Be in love with your life. Every moment of it." />
+				<img src="<?php bloginfo('template_url'); ?>/images/certified-in-conversational-intelligence.png" alt="Certified in Conversational Intelligence" />
                 
 				<h2>Most Popular</h2>
 				<ul class="popular">
@@ -18,8 +18,8 @@
 				</ul>
 				
 				<h2>Connect With Me</h2>
-				<p>Follow me on <a href="http://twitter.com/#!/amyelizawong" target="_blank">Twitter</a>.
-				<br />Follow me on <a href="<?php echo FACEBOOK_URL; ?>" target="_blank">Facebook</a>.</p>
+				<p><a href="http://www.alwaysonpurpose.com/resources-and-inspirations" target="_blank">Resources and Inspirations List</a>
+				<br />Follow me on <a href="<?php echo FACEBOOK_URL; ?>" target="_blank">Facebook</a></p>
                 
 				<h2>Categories</h2>
 				<ul class="categories"><?php wp_list_categories('orderby=name&order=ASC&show_count=0&title_li=&child_of=3'); ?></ul>

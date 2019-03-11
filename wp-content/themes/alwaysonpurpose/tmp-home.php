@@ -23,8 +23,8 @@ get_header(); ?>
         <!--Testimonials-->
 				<ul id="testimonials">
 					<li>
-						<blockquote><p>Amy does not tell me what to do or how to do it.  Instead she helps me develop my own set of tools so I can help myself overcome past barriers and reach my goals.</p></blockquote>
-						<p>Suzy Lee</p>
+						<blockquote><p>“Amy Wong is a powerhouse.  Whether you’re looking for a dynamic keynote speaker to ignite your event, a skilled trainer to deliver an impactful workshop for your leaders or teams, or an experienced coach to help take your life and career to the next level, Amy can do it. She’s a change agent and catalyst who empowers people, groups, and organizations of all kinds produce extraordinary results.”</p></blockquote>
+						<p>Mike Robbins, author of Nothing Changes Until You Do</p>
 					</li>
 					<li>
 						<blockquote><p>Her insightfulness and understanding of what is food for growth and expansion helped me break through the remaining barriers that I was creating for myself... I am now living a life that I thought I never could have.</p></blockquote>

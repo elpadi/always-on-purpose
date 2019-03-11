@@ -1,6 +1,7 @@
 <?php
 define('WP_CONTENT_DIR', __DIR__.'/wp-content');
-define('WP_CONTENT_URL', 'http://'.$_SERVER['HTTP_HOST'].'/wp-content/');
+if (isset($_SERVER['HTTP_HOST']))
+	define('WP_CONTENT_URL', 'http://'.$_SERVER['HTTP_HOST'].'/wp-content/');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -60,7 +61,34 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', TRUE);
+if (is_file(__DIR__.'/vendor/autoload.php')) include(__DIR__.'/vendor/autoload.php');
+define('IS_LOCAL', isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], 'localhost') !== FALSE);
+
+if (IS_LOCAL) define('WP_DEBUG', true);
+else call_user_func(function() {
+	define('PRINT_ERROR_TRACE', FALSE);
+	$DEBUG_VAL = 'wp_debug_cookie_value';
+	$DEBUG_KEY = 'wp_debug_cookie_key';
+	if (isset($_COOKIE[$DEBUG_KEY]) && $_COOKIE[$DEBUG_KEY] == $DEBUG_VAL) {
+		ini_set('error_log', __DIR__.'/errors.log');
+		set_error_handler(function($errno, $errstr, $errfile, $errline) {
+			if (IS_LOCAL && strpos($errfile, 'update.php') !== FALSE) return;
+			if (function_exists('dump')) dump(func_get_args(), PRINT_ERROR_TRACE ? debug_backtrace() : NULL);
+			else var_dump(func_get_args(), PRINT_ERROR_TRACE ? debug_backtrace() : NULL);
+			error_log("$errfile:$errline (Error $errno) $errstr");
+		});
+		ini_set('display_startup_errors','1');
+		ini_set('display_errors','1');
+		error_reporting(-1);
+		clearstatcache();
+		define('WP_DEBUG', true);
+	}
+	else define('WP_DEBUG', false);
+});
+
+if (IS_LOCAL) {
+	define('AUTOMATIC_UPDATER_DISABLED', TRUE);
+}
 
 /* That's all, stop editing! Happy blogging. */
 

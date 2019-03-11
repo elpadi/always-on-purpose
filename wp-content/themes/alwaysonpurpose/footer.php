@@ -12,13 +12,14 @@
 ?>
 	<!--Footer-->
         <div id="footer">
-					<p><a href="<?php echo get_permalink(6); ?>">Amy Eliza Wong</a> - <a href="<?php echo get_permalink(8); ?>">Always On Purpose® Life Coach</a></p>
-					<p><a href="mailto:amy@alwaysonpurpose.com">amy@alwaysonpurpose.com</a> • <a href="tel:415-999-7556">415-999-7556</a> / <a href="tel:916-542-8220">916-542-8220</a></p>
-					<p>5901 Belmont Park Fair Oaks, CA 95628</p>
-					<p class="fine">© 2014 Amy Wong,  Always On Purpose • Site & Branding By Sheila Buchanan</p>
+					<p><a href="<?php echo get_permalink(8); ?>">Always On Purpose® Coaching</a></p>
+					<p><a href="mailto:info@alwaysonpurpose.com">info@alwaysonpurpose.com</a> • <a href="tel:415-999-7556">415-999-7556</a> / <a href="tel:916-542-8220">916-542-8220</a></p>
+					<p>2120 University Ave, Berkeley CA 94707</p>
+					<p class="fine">© 2019 Joy Container, LLC,  Always On Purpose</p>
 					<ul class="social-media-links">
-						<li class="twitter"><a href="http://twitter.com/#!/amyelizawong" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn_twitter.jpg"></a></li>
+						<li class="twitter"><a href="https://www.linkedin.com/in/amyelizawong/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn_twitter.jpg"></a></li>
 						<li class="facebook"><a href="<?php echo FACEBOOK_URL; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn_facebook.jpg"></a></li>
+						<li class="instagram"><a href="https://www.instagram.com/amyelizawong/?hl=en" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn_instagram.png"></a></li>
 					</ul>
         </div>
         <!--End Footer-->
