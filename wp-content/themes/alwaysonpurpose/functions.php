@@ -189,7 +189,13 @@ function twentyten_setup() {
 endif;
 
 add_action('wp_enqueue_scripts', function() {
-	wp_enqueue_script('main', get_bloginfo('template_url').'/scripts.js', array('jquery'), 1.0);
+	$dir = get_stylesheet_directory();
+	$url = get_stylesheet_directory_uri();
+
+	wp_enqueue_script('main', $url.'/scripts.js', array('jquery'), filemtime($dir.'/scripts.js'));
+
+	wp_enqueue_style('style', $url.'/style.css', [], filemtime($dir.'/style.css'));
+	wp_enqueue_style('always', $url.'/always.css', [], filemtime($dir.'/always.css'));
 });
 if ( ! function_exists( 'twentyten_admin_header_style' ) ) :
 /**

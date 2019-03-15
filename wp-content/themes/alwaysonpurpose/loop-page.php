@@ -18,11 +18,19 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php if ( is_front_page() ) { ?>
-						<h2 class="entry-title"><?php the_title(); ?></h2>
-					<?php } else { ?>
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-					<?php } ?>
+					<div class="entry-header">
+						<?php if (has_post_thumbnail()): ?>
+						<figure>
+							<?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
+							<figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
+						</figure>
+						<?php endif; ?>
+						<?php if ( is_front_page() ) { ?>
+							<h2 class="entry-title"><?php the_title(); ?></h2>
+						<?php } else { ?>
+							<h1 class="entry-title"><?php the_title(); ?></h1>
+						<?php } ?>
+					</div><!-- .entry-header -->
 
 					<div class="entry-content">
 						<?php the_content(); ?>
