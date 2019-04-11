@@ -262,7 +262,7 @@ h1,h2,h3,h4,h5 {
 #content .col p{
 	margin:15px 20 0 0;
 }
-#content .col a:hover {
+#content .col a {
 	color: #f8ef19
 }
 #content .col .hr{
