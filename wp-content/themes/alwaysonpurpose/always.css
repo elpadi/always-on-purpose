@@ -264,9 +264,16 @@ h1,h2,h3,h4,h5 {
 #content .col p{
 	margin:15px 20 0 0;
 }
-#content .col a {
+#content .col a:hover,
+#content .col:first-child a {
 	color: #f8ef19
 }
+
+
+
+
+
+
 #content .col .hr{
 	width:100%;
 	background:#9fa1a4;
@@ -356,7 +363,7 @@ h1,h2,h3,h4,h5 {
 	margin:0 0 20px 0;
 }
 .page-template-default #content .last p{
-	margin:0 0 15px 0;
+	margin:0 0 25px 0;
 	padding:0 30px;
 	color:#616264;
 	font-style:normal;
@@ -451,6 +458,20 @@ h1,h2,h3,h4,h5 {
 	margin:0 0 20px 0;
 	font-family: 'BrandonGrotesque-Regular', sans-serif;
 	color:#FFF;
+	}
+
+
+.page-id-8 #content .col a {
+	display:inline-block;
+	margin-top: 1em 1em;
+	padding: 0.7em 1.2em;
+	background-color: #f6ee1d;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'BrandonGrotesque-Regular', sans-serif;
+	text-decoration: none;
+
+
 }
 .page-id-8 #content .quote ul li{
 	line-height:20px;
@@ -466,7 +487,6 @@ h1,h2,h3,h4,h5 {
 }
 .page-id-8 #content .last a{
 	color:#616264;
-	text-decoration:underline;
 }
 /*-----Business Coaching Template-----*/
 .page-id-1485 #content .quote p{

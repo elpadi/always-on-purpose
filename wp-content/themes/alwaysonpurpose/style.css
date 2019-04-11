@@ -201,13 +201,12 @@ DESCRIPTION: One centered column with no sidebar
 	padding-right: 1em;
 }
 .one-column #content .wp-block-column a {
-	display: inline-block;
+	display:inline-block;
 	margin-top: 2em;
 	padding: 0.7em 1.2em;
 	background-color: #f6ee1d;
 	text-transform: uppercase;
 	font-weight: bold;
-	letter-spacing: 1px;
 }
 .one-column #content .wp-block-column a:hover {
 	color: black;
