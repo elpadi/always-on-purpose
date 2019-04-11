@@ -608,6 +608,9 @@ div.menu li {
 	border:2px #fff solid;
 	width:306px;
 }
+#content .wpcf7-response-output {
+	background-color: white;
+}
 #content textarea{height:122px;}
 #content input[type=submit]{width:80px; height:24px; background:#fff000; border:0; color:#616163; margin:0 0 0 230px; font-family: 'Josefin Sans', sans-serif;}
 #content p,

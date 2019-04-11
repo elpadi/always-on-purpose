@@ -247,6 +247,8 @@ h1,h2,h3,h4,h5 {
 	width:814px;
 	background:url(images/bg_homeContent.jpg) #7e8083 center bottom no-repeat;
 	padding:24px 30px;
+	position: relative;
+	z-index: 2;
 }
 #content .col{
 	float:left;
