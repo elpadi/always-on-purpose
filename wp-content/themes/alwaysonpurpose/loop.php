@@ -58,7 +58,7 @@
 <?php /* How to display posts of the Gallery format. The gallery category is the old way. */ ?>
 
 	<?php if ( in_category( 'blog' ) || post_is_in_descendant_category( get_term_by( 'slug', 'blog', 'category' ) ) ) : ?>
-	<div class="post-wrapper" data-template="<?= get_page_template_slug(); ?>">
+	<div class="post-wrapper" data-id="<?php the_ID(); ?>" data-template="<?= get_page_template_slug(); ?>">
                 
                 	<div class="post-header">
                     

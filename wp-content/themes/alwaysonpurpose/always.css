@@ -1198,3 +1198,18 @@ h1,h2,h3,h4,h5 {
 	display: none;
 }
 
+/* home read more */
+.post-content--full > * {
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+.post-wrapper.loaded .post-content:not(.post-content--full) {
+	display: none;
+}
+.post-wrapper .read-more-btn {
+	white-space: nowrap;
+	cursor: pointer;
+}
+.post-wrapper.loading .read-more-btn {
+	pointer-events: none;
+}

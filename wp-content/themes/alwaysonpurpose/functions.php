@@ -192,7 +192,7 @@ add_action('wp_enqueue_scripts', function() {
 	$dir = get_stylesheet_directory();
 	$url = get_stylesheet_directory_uri();
 
-	wp_enqueue_script('main', $url.'/scripts.js', array('jquery'), filemtime($dir.'/scripts.js'));
+	wp_enqueue_script('main', $url.'/scripts.js', ['jquery','wp-api'], filemtime($dir.'/scripts.js'));
 
 	wp_enqueue_style('style', $url.'/style.css', [], filemtime($dir.'/style.css'));
 	wp_enqueue_style('always', $url.'/always.css', [], filemtime($dir.'/always.css'));
@@ -522,20 +522,20 @@ endif;
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 function aop_html_excerpt($text) {
     global $post;
-    if ( '' == $text ) {
-        $text = get_the_content('');
-        $text = apply_filters('the_content', $text);
-        $text = str_replace('\]\]\>', ']]&gt;', $text);
-        $text = strip_tags($text, '<br>,<em>,<i>,<b>,<strong>,<ul>,<ol>,<li>,<p><img>');
-        $excerpt_length = 55;
-        $words = explode(' ', $text, $excerpt_length + 1);
-        if (count($words)> $excerpt_length) {
-            array_pop($words);
-            array_push($words, '...');
-            $text = implode(' ', $words);
-        }
-    }
-    return $text;
+	$text = '';
+	$paragraphs = preg_split("/\n/", strip_tags($post->post_content));
+	$i = 0;
+	while (strlen($text) < 300 && count($paragraphs)) {
+		$text .= trim(array_shift($paragraphs));
+	}
+	if (strlen($text) > 10) {
+		$end = strpos($post->post_content, substr($text, strlen($text) - 10));
+		$content = substr($post->post_content, 0, $end + 10) . ' <span class="read-more-btn">[read more]</span>';
+	}
+	else {
+		$content = $post->post_content;
+	}
+	return apply_filters('the_content', $content);
 }
 add_filter('get_the_excerpt', 'aop_html_excerpt');
 
