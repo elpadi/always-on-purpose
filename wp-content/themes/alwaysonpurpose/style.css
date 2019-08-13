@@ -83,8 +83,10 @@ a img {
 	align-items: center;
 }
 #content-wrapper #newsletter-form input {
+	/*
 	margin-left: 8px;
 	width: 33.33%;
+	*/
 }
 @media (max-width: 767px) {
 	#content-wrapper #newsletter-form form {
@@ -94,7 +96,9 @@ a img {
 @media (min-width: 768px) {
 	#content-wrapper #newsletter-form form {
 		width: calc(100% - 390px);
+		/*
 		float: right;
+		*/
 	}
 	.entry-header img {
 		filter: brightness(0.7);
@@ -612,13 +616,18 @@ div.menu li {
 }
 #content textarea{height:122px;}
 #content input[type=submit]{width:80px; height:24px; background:#fff000; border:0; color:#616163; margin:0 0 0 230px; font-family: 'Josefin Sans', sans-serif;}
-#content p,
+.post-content > p,
+/*#content p,*/
 #content ul,
 #content ol,
 #content dd,
 #content pre,
 #content hr {
 	margin-bottom: 24px;
+}
+.post-content > p {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 #content ul ul,
 #content ol ol,
@@ -649,6 +658,9 @@ div.menu li {
 	color: #000;
 	line-height: 1.5em;
 	margin: 0 0 20px 0;
+}
+#content .post-header h1 {
+	margin-bottom: 0;
 }
 #content table {
 	border: 1px solid #e7e7e7;
@@ -958,12 +970,11 @@ img.aligncenter {
 	background: #f1f1f1;
 	line-height: 18px;
 	margin-bottom: 20px;
-	max-width: 632px !important; /* prevent too-wide images from breaking layout */
-	padding: 4px;
+	width: auto !important; /* prevent too-wide images from breaking layout */
+	padding: 10px;
 	text-align: center;
 }
 .wp-caption img {
-	margin: 5px 5px 0;
 }
 .wp-caption p.wp-caption-text {
 	color: #888;
@@ -1057,7 +1068,8 @@ img.aligncenter {
 	display: block;
 }
 #nav-below {
-	margin: -18px 0 0 0;
+	margin: -1rem 0 0 0;
+	padding: 10px;
 }
 
 
@@ -1357,7 +1369,9 @@ h3#reply-title {
 -------------------------------------------------------------- */
 
 #footer {
+	/*
 	margin-bottom: 20px;
+	*/
 }
 #colophon {
 	border-top: 4px solid #000;
@@ -1567,15 +1581,7 @@ code {
 	height: auto;
 	margin-bottom: 0;
 }
-.page-template-page-menus #header,
-.blog #header,
-.single #header {
-	margin-bottom: 45px;
-}
 #logo {
-	float: left;
-	width: calc(100% - 13px);
-	padding: .5em 1.5em 0 1.5em;
 }
 #logo-img {
 	display: block;

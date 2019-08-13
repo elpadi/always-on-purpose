@@ -522,15 +522,15 @@ endif;
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 function aop_html_excerpt($text) {
     global $post;
-	$text = '';
-	$paragraphs = preg_split("/\n/", strip_tags($post->post_content));
-	$i = 0;
-	while (strlen($text) < 300 && count($paragraphs)) {
-		$text .= trim(array_shift($paragraphs));
+	$lastIndex = 0;
+	$index = 0;
+	$charCount = 0;
+	while (($index = strpos($post->post_content, "\n", $index + 1)) && $charCount < 300) {
+		$lastIndex = $index;
+		$charCount = strlen(strip_tags(substr($post->post_content, 0, $index)));
 	}
-	if (strlen($text) > 10) {
-		$end = strpos($post->post_content, substr($text, strlen($text) - 10));
-		$content = substr($post->post_content, 0, $end + 10) . ' <span class="read-more-btn">[read more]</span>';
+	if ($charCount > 10) {
+		$content = trim(substr($post->post_content, 0, $lastIndex)) . "\n\n" . ' <span class="read-more-btn">[read more]</span>';
 	}
 	else {
 		$content = $post->post_content;

@@ -28,7 +28,6 @@ get_header(); ?>
 	    
 	<!--End Home Feature-->
 	</div>
-	<div class="clear"></div>
 	
 	<div id="content">
 		<!--Testimonials-->
@@ -58,7 +57,6 @@ get_header(); ?>
 				<p>Daniel Verrico</p>
 			</li>
 		</ul>
-		<div class="clear"></div>
 
 		<!-- home page video before blog posts -->
 		<?php if ( is_home() && function_exists('aop_home_video') ) aop_home_video(); ?>
@@ -79,6 +77,5 @@ get_header(); ?>
 	</div>
         
 	<div class="col sidebar"><?php get_sidebar(); ?></div>
-	<div class="clear"></div>
 <?php get_footer(); ?>
 

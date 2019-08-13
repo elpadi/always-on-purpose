@@ -21,10 +21,10 @@
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
-	<div id="nav-above" class="navigation">
+	<nav id="nav-above" class="navigation">
 		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentyten' ) ); ?></div>
 		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
-	</div><!-- #nav-above -->
+	</nav><!-- #nav-above -->
 <?php endif; ?>
 
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
@@ -58,17 +58,16 @@
 <?php /* How to display posts of the Gallery format. The gallery category is the old way. */ ?>
 
 	<?php if ( in_category( 'blog' ) || post_is_in_descendant_category( get_term_by( 'slug', 'blog', 'category' ) ) ) : ?>
-	<div class="post-wrapper" data-id="<?php the_ID(); ?>" data-template="<?= get_page_template_slug(); ?>">
+	<article class="post-wrapper" data-id="<?php the_ID(); ?>" data-template="<?= get_page_template_slug(); ?>">
                 
                 	<div class="post-header">
                     
-                    	<div class="post-date"><?php the_date('m-d-Y'); ?></div>
                         <div class="post-title">
                         
                         	<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                         
                         </div>
-                        <div class="clear"></div>
+                    	<div class="post-date"><?php the_date('m-d-Y'); ?></div>
                     
                     </div>
 					<div class="post-content">
@@ -84,17 +83,15 @@
                         <div class="post-comments-wrapper">
                             <?php comments_number('0 Comments', '1 Comment', '% Comments' );?>
                         </div>
-                        <div class="clear"></div>
                     
                     </div>
                 
-                </div>
-                <div class="clear"></div>
+                </article>
 
 <?php /* How to display posts of the Aside format. The asides category is the old way. */ ?>
 
 	<?php elseif ( ( function_exists( 'get_post_format' ) && 'aside' == get_post_format( $post->ID ) ) || in_category( _x( 'asides', 'asides category slug', 'twentyten' ) )  ) : ?>
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<?php if ( is_archive() || is_search() ) : // Display excerpts for archives and search. ?>
 			<div class="entry-summary">
@@ -112,12 +109,12 @@
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?></span>
 				<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 			</div><!-- .entry-utility -->
-		</div><!-- #post-## -->
+		</article><!-- #post-## -->
 
 <?php /* How to display all other posts. */ ?>
 
 	<?php else : ?>
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 			<div class="entry-meta">
@@ -154,7 +151,7 @@
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?></span>
 				<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 			</div><!-- .entry-utility -->
-		</div><!-- #post-## -->
+		</article><!-- #post-## -->
 
 		<?php comments_template( '', true ); ?>
 
@@ -164,8 +161,8 @@
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-				<div id="nav-below" class="navigation">
+				<nav id="nav-below" class="navigation">
 					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentyten' ) ); ?></div>
 					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
-				</div><!-- #nav-below -->
+				</nav><!-- #nav-below -->
 <?php endif; ?>

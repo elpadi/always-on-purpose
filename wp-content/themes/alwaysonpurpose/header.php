@@ -63,18 +63,21 @@
     	<!--Header-->
         <div id="header">
         
-        	<!--Logo-->
             <div id="logo">
-            
-							<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.jpg" alt="Amy Eliza Wong - Always On Purpose" /></a>
-            
+				<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.jpg" alt="Amy Eliza Wong - Always On Purpose" /></a>
             </div>
-            <!--End Logo-->
             
-						<div id="nav">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-						</div>
-            <div class="clear"></div>
+			<div id="burger">
+				<button class="clean-btn icon-btn burger-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M6 36h36v-4H6v4z"/><path d="M6 36h36v-4H6v4z" transform="translate(0 -10)"/><path d="M6 36h36v-4H6v4z" transform="translate(0 -20)"/></svg>
+					<!--svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"/></svg-->
+				</button>
+			</div>
+
+			<div id="nav">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			</div>
+
         </div>
 				
 				<div id="newsletter-form">

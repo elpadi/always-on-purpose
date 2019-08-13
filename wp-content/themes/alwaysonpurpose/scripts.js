@@ -1,6 +1,13 @@
 (function($) {
 
 	$.fn.tCycle = function(fadeDuration, changeDuration) {
+		let index = -1, container = this;
+		setInterval(function() {
+			let items = container.find('li');
+			index = (index + 1) % items.length;
+			items.eq(index).addClass('selected').siblings().removeClass('selected');
+		}, 4000);
+		/*
 		var index = 0, $items = this.children();
 		var count = $items.length;
 		if (count > 1) {
@@ -12,11 +19,18 @@
 			}, fadeDuration * 2 + changeDuration);
 		}
 		return this;
+		*/
 	};
+
+	window.addEventListener('load', function() {
+		let h = Math.max.apply(this, $('#testimonials li').map((i, li) => li.offsetHeight).get());
+		if (h) {
+			$('#testimonials').css('height', `${h + 100}px`).addClass('init').tCycle();
+		}
+	});
 
 	$(document).ready(function() {
 
-		$('#testimonials').tCycle(1000, 5000);
 		$('.video iframe').each(function() { this.style.height = Math.round(this.offsetWidth * 9 / 16) + 'px'; });
 
 	}).on('click', '.read-more-btn', e => {
@@ -44,6 +58,10 @@
 				}, 200);
 			}
 		});
+
+	}).on('click', '.burger-btn', e => {
+
+		document.body.dataset.isMenuOpen = document.body.dataset.isMenuOpen != 'true';
 
 	});
 
