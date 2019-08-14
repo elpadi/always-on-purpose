@@ -81,6 +81,7 @@
         </div>
 				
 				<div id="newsletter-form">
+					<img src="<?= get_stylesheet_directory_uri(); ?>/images/signup.png" alt="Sign up to get the latest insights, ideas, and updates!">
 					<form action="http://alwaysonpurpose.us8.list-manage.com/subscribe/post" method="POST">
 						<input type="hidden" name="u" value="dddb6e702c3d9523c852c6d85">
 						<input type="hidden" name="id" value="7711336f7b">

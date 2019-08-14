@@ -7,31 +7,26 @@
 			index = (index + 1) % items.length;
 			items.eq(index).addClass('selected').siblings().removeClass('selected');
 		}, 4000);
-		/*
-		var index = 0, $items = this.children();
-		var count = $items.length;
-		if (count > 1) {
-			$items.slice(1).fadeOut(fadeDuration);
-			setInterval(function() {
-				$items.eq(index).fadeOut(fadeDuration);
-				index = (index + 1) % count;
-				$items.eq(index).fadeIn(fadeDuration);
-			}, fadeDuration * 2 + changeDuration);
-		}
-		return this;
-		*/
 	};
 
-	window.addEventListener('load', function() {
+	let onResize = function() {
 		let h = Math.max.apply(this, $('#testimonials li').map((i, li) => li.offsetHeight).get());
 		if (h) {
-			$('#testimonials').css('height', `${h + 100}px`).addClass('init').tCycle();
+			$('#testimonials').css('height', `${h + 100}px`);
+			if (window.innerWidth >= 640) {
+				$('.col.sidebar').children('img').css('height', `${h + 100}px`);
+			}
 		}
+		$('.video iframe').each(function() { this.setAttribute('height', Math.round(this.offsetWidth * 9 / 16)); });
+	};
+	window.addEventListener('resize', onResize);
+	window.addEventListener('load', function() {
+		onResize();
+		$('#testimonials').addClass('init').tCycle();
 	});
 
 	$(document).ready(function() {
 
-		$('.video iframe').each(function() { this.style.height = Math.round(this.offsetWidth * 9 / 16) + 'px'; });
 
 	}).on('click', '.read-more-btn', e => {
 

@@ -11,6 +11,7 @@
  */
 ?>
 	<!--Footer-->
+		<hr>
         <div id="footer">
 			<p><a href="<?php echo get_permalink(8); ?>">Always On Purpose® Coaching</a></p>
 			<p><a href="mailto:info@alwaysonpurpose.com">info@alwaysonpurpose.com</a><span class="separator"> • </span><a href="tel:415-999-7556">415-999-7556</a><span class="separator"> / </span><a href="tel:916-542-8220">916-542-8220</a></p>

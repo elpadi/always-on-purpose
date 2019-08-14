@@ -78,9 +78,6 @@ a img {
 	overflow: auto;
 }
 #content-wrapper #newsletter-form form {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
 }
 #content-wrapper #newsletter-form input {
 	/*
@@ -89,14 +86,16 @@ a img {
 	*/
 }
 @media (max-width: 767px) {
+	/*
 	#content-wrapper #newsletter-form form {
 		padding-top: 50px;
 	}
+	*/
 }
 @media (min-width: 768px) {
 	#content-wrapper #newsletter-form form {
-		width: calc(100% - 390px);
 		/*
+		width: calc(100% - 390px);
 		float: right;
 		*/
 	}
