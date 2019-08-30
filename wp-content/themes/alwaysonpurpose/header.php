@@ -64,7 +64,7 @@
         <div id="header">
         
             <div id="logo">
-				<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.jpg" alt="Amy Eliza Wong - Always On Purpose" /></a>
+				<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/always-on-purpose-logo.gif" alt="Amy Eliza Wong - Always On Purpose" /></a>
             </div>
             
 			<div id="burger">
