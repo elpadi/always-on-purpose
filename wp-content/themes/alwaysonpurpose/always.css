@@ -84,12 +84,11 @@ h1,h2,h3,h4,h5 {
 	font-family: 'BrandonGrotesque-Regular',sans-serif;
 	font-size: 1.2em;
 	display: grid;
-	grid-template-columns: minmax(auto, 335px) 1fr;
+	grid-template-columns: minmax(auto, 345px) 1fr;
 	align-items: end;
 	border-bottom: 1px solid #e6e7e7;
 	position: relative;
 	z-index: 5;
-	padding: 0 10px;
 }
 #header .clear {
 	display: none;
@@ -103,6 +102,7 @@ h1,h2,h3,h4,h5 {
 }
 #header #logo a {
 	display: block;
+	margin-left: 10px;
 	transition: color 0.2s linear, border-color 0.2s linear;
 }
 #header #logo img {
@@ -143,9 +143,8 @@ body[data-is-menu-open="true"] #header #nav {
 	list-style-type: none;
 	display: flex;
 	justify-content: center;
-	align-items: flex-end;
-	flex-wrap: wrap;
-	max-width: 700px;
+	align-items: flex-start;
+	flex-direction: column;
 	margin: auto;
 }
 #header #nav ul ul {
@@ -170,11 +169,14 @@ body[data-is-menu-open="true"] #header #nav {
 }
 #header #nav li {
 	position: relative;
-	margin-left: 20px;
+	margin-bottom: 1.7em;
+	margin-left: 3.3em;
 }
-#header #nav ul ul li,
 #header #nav li:first-child {
-	margin-left:0;
+	margin-top: 1em;
+}
+#header #nav ul ul li {
+	margin-left: 0;
 }
 #header #nav a {
 	color: #7e8083;
@@ -193,12 +195,9 @@ body[data-is-menu-open="true"] #header #nav {
 	background-color: #5d5d5e;
 	text-align: right;
 	padding: 10px;
-	display: none;
+	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-}
-body[data-is-menu-open="true"] #newsletter-form {
-	display: flex;
 }
 #newsletter-form > img {
 	max-width: 378px;
@@ -1368,8 +1367,7 @@ body[data-is-menu-open="true"] #newsletter-form {
 @media (min-width: 640px) {
 	#content-wrapper {
 		grid-template-columns: 2fr minmax(240px, 280px);
-		grid-gap: 10px;
-		padding: 10px;
+		grid-gap: 0 10px;
 	}
 	#header,
 	#newsletter-form,
@@ -1377,6 +1375,15 @@ body[data-is-menu-open="true"] #newsletter-form {
 	#content-wrapper > hr,
 	#footer {
 		grid-column: 1 / span 2;
+	}
+	#logo {
+		margin-left: 10px;
+	}
+	#burger {
+		margin-right: 10px;
+	}
+	#homeFeature {
+		margin-bottom: 10px;
 	}
 	#content-wrapper .sidebar {
 		padding: 0;
@@ -1441,6 +1448,9 @@ body[data-is-menu-open="true"] #newsletter-form {
 }
 /* no burger */
 @media (min-width: 840px) {
+	#content-wrapper {
+		padding: 10px;
+	}
 	#header #burger {
 		display: none;
 	}
