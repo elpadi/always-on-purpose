@@ -568,3 +568,11 @@ if ( ! function_exists( 'post_is_in_descendant_category' ) ) {
 	}
 }
 
+add_filter('body_class', function($classes) {
+	global $post;
+	if ($post) {
+		if (in_array($post->post_name, ['contact'])) $classes[] = 'no-content-header-img no-flower-bg';
+		$classes[] = "post-$post->post_name";
+	}
+	return $classes;
+});

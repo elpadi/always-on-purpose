@@ -15,31 +15,32 @@
 get_header(); ?>
 
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-        <?php $custom_fields = get_post_custom();?>
+		<?php
+			$custom_fields = get_post_custom();
+			$hasQuote = isset($custom_fields['left-col-quote']) && count($custom_fields['left-col-quote']);
+		?>
+
         <!--Content-->
         <div id="content">
         
-        	<div class="col quote">
-            
-                <center><?php the_post_thumbnail( 'single-post-thumbnail' ); ?></center>
-                
-				<?php if(count($custom_fields['left-col-quote']) > 0){?>
-                        <?php echo $custom_fields['left-col-quote'][0]?>
-                <?php } ?>
-            
-            </div>
-            
             <div class="col last">
-                
+
                 <h1 class="title"><strong><?php the_title(); ?></strong></h1>
                 
                 <?php the_content(); ?>
             
             </div>
-            <div class="clear"></div>
-        
-        </div>
-        <!--End Content-->
+            
+		</div>
+
+		<div class="col sidebar" data-has-quote="<?= $hasQuote ? 'true' : 'false'; ?>">
+		
+			<?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
+
+			<?php if ($hasQuote) echo $custom_fields['left-col-quote'][0]; ?>
+
+		</div>
+
         <?php endwhile; // end of the loop. ?>
         
 <?php get_footer(); ?>

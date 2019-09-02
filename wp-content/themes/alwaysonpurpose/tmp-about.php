@@ -20,14 +20,6 @@ get_header(); ?>
         <!--Content-->
         <div id="content">
         
-        	<div class="col">
-            
-                <?php if(count($custom_fields['left-col-quote']) > 0){?>
-                        <?php echo $custom_fields['left-col-quote'][0]?>
-                <?php } ?>
-            
-            </div>
-            
             <div class="col last">
             
             	<?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
@@ -37,10 +29,15 @@ get_header(); ?>
                 <?php the_content(); ?>
             
             </div>
-            <div class="clear"></div>
         
         </div>
-        <!--End Content-->
+
+		<div class="col sidebar">
+		
+			<?php if (count($custom_fields['left-col-quote'])) echo $custom_fields['left-col-quote'][0]; ?>
+
+		</div>
+
         <?php endwhile; // end of the loop. ?>
         
 <?php get_footer(); ?>
